@@ -26,7 +26,7 @@ def generate_data():
             rainfall = numpy.random.randint(0, 350) # in mm
             data_list.append([date, country, temperature, rainfall])
     df = pandas.DataFrame(data_list, columns=["date", "country", "temperature", "rainfall"])
-    return df
+    return df.to_csv('climate_data.csv', index=False)
 
     
 
