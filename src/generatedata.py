@@ -22,11 +22,10 @@ def generate_data():
     data_list = []
     for date in dates:
         for country in countries:
-            temperature = numpy.random.randint(-10, 55) # in Celsius
+            temperature = numpy.random.randint(-11, 56) # in Celsius
             rainfall = numpy.random.randint(0, 350) # in mm
             data_list.append([date, country, temperature, rainfall])
     df = pandas.DataFrame(data_list, columns=["date", "country", "temperature", "rainfall"])
     return df.to_csv('climate_data.csv', index=False)
 
     
-
